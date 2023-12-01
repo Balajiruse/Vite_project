@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { deleteDoctor } from "../Helpers/helper";
+import { deleteDoctor } from "../helpers/helper";
 
 // eslint-disable-next-line react/prop-types
 export default function Main({ doctorData, setDoctordata }) {
@@ -72,7 +72,8 @@ export default function Main({ doctorData, setDoctordata }) {
                 <div className="card-actions justify-end">
                   <button
                     className="btn btn-primary"
-                    onClick={() => handleEdit(idx)}
+                    onClick={() => handleEdit(docInfo.id)}
+                    
                   >
                     edit
                   </button>
